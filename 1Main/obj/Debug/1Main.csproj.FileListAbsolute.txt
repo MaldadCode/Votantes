@@ -1,0 +1,25 @@
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe.config
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\bin\Debug\1Main.pdb
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csprojResolveAssemblyReference.cache
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Properties.Resources.resources
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csproj.GenerateResource.Cache
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\1Main.exe
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\1Main.pdb
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Vista.ConsultarMiembros.resources
+C:\Users\Alexánder\Dropbox\Projects C#\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Vista.MainWindow.resources
+C:\Users\Alexánder\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe.config
+C:\Users\Alexánder\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.exe
+C:\Users\Alexánder\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.pdb
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe.config
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.exe
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.pdb
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\Model\VotantesDb.mdf
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\Model\VotantesDb_log.ldf
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.pdb
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csprojResolveAssemblyReference.cache
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Vista.ConsultarMiembros.resources
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Vista.MainWindow.resources
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Properties.Resources.resources
+C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csproj.GenerateResource.Cache
