@@ -118,10 +118,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\VotantesDb.mdf">
+    <Content Include="Modelo\VotantesDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Model\VotantesDb_log.ldf">
+    <Content Include="Modelo\VotantesDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>VotantesDb.mdf</DependentUpon>
     </Content>

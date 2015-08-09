@@ -26,7 +26,6 @@ namespace _1Main.Vista
                 return instance;
             }
         }
-        #endregion
 
         private ConsultarMiembros()
         {
@@ -36,7 +35,8 @@ namespace _1Main.Vista
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-        
+        #endregion
+
         private void activatePanels(RadioButton rbButton)
         {
             if (rbButton.Name == rbCedula.Name && rbButton.Checked == true)
@@ -74,6 +74,7 @@ namespace _1Main.Vista
 
         }
 
+        #region Enable RadioButtons
         private void rbCedula_CheckedChanged(object sender, EventArgs e)
         {
             activatePanels(rbCedula);
@@ -87,6 +88,12 @@ namespace _1Main.Vista
         private void rbNombresYApellidos_CheckedChanged(object sender, EventArgs e)
         {
             activatePanels(rbNombresYApellidos);
+        }
+        #endregion
+
+        private void gbInfoBtSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace _1Main
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());
+//            Application.Run(ConsultarMiembros.Instance);
         }
     }
 }
