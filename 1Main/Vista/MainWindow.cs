@@ -37,5 +37,9 @@ namespace _1Main.Vista
                 Application.Exit();
             }
         }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

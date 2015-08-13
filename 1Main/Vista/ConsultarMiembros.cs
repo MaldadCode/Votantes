@@ -26,6 +26,7 @@ namespace _1Main.Vista
                 return instance;
             }
         }
+        #endregion
 
         private ConsultarMiembros()
         {
@@ -35,7 +36,6 @@ namespace _1Main.Vista
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-        #endregion
 
         private void activatePanels(RadioButton rbButton)
         {

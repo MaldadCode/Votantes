@@ -55,31 +55,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbInfo = new System.Windows.Forms.GroupBox();
+            this.gbInfoBtSalir = new System.Windows.Forms.Button();
+            this.gbInfoTbCircunscripcion = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.gbInfoTbSegundoApellido = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.gbInfoTbPrimerApellido = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.gbInfoTbMesa = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.gbInfoTbNoOrden = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.gbInfoTbCentroDeVotacion = new System.Windows.Forms.TextBox();
+            this.gbInfoTbOrganismo = new System.Windows.Forms.TextBox();
+            this.gbInfoTbMunicipio = new System.Windows.Forms.TextBox();
+            this.gbInfoTbProvincia = new System.Windows.Forms.TextBox();
+            this.gbInfoTbNombre = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbInfomTbCedula = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.gbInfoTbNombre = new System.Windows.Forms.TextBox();
-            this.gbInfoTbProvincia = new System.Windows.Forms.TextBox();
-            this.gbInfoTbMunicipio = new System.Windows.Forms.TextBox();
-            this.gbInfoTbOrganismo = new System.Windows.Forms.TextBox();
-            this.gbInfoTbCentroDeVotacion = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.gbInfoTbNoOrden = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.gbInfoTbMesa = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.gbInfoTbPrimerApellido = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.gbInfoTbSegundoApellido = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.gbInfoTbCircunscripcion = new System.Windows.Forms.TextBox();
-            this.gbInfoBtSalir = new System.Windows.Forms.Button();
             this.gbFiltrarPor.SuspendLayout();
             this.panelCedula.SuspendLayout();
             this.panelApellidos.SuspendLayout();
@@ -366,14 +366,196 @@
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Info";
             // 
+            // gbInfoBtSalir
+            // 
+            this.gbInfoBtSalir.Location = new System.Drawing.Point(353, 97);
+            this.gbInfoBtSalir.Name = "gbInfoBtSalir";
+            this.gbInfoBtSalir.Size = new System.Drawing.Size(422, 69);
+            this.gbInfoBtSalir.TabIndex = 25;
+            this.gbInfoBtSalir.Text = "Salir";
+            this.gbInfoBtSalir.UseVisualStyleBackColor = true;
+            this.gbInfoBtSalir.Click += new System.EventHandler(this.gbInfoBtSalir_Click);
+            // 
+            // gbInfoTbCircunscripcion
+            // 
+            this.gbInfoTbCircunscripcion.Location = new System.Drawing.Point(429, 68);
+            this.gbInfoTbCircunscripcion.Name = "gbInfoTbCircunscripcion";
+            this.gbInfoTbCircunscripcion.Size = new System.Drawing.Size(84, 20);
+            this.gbInfoTbCircunscripcion.TabIndex = 24;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(344, 71);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(79, 13);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Circunscripcion";
+            // 
+            // gbInfoTbSegundoApellido
+            // 
+            this.gbInfoTbSegundoApellido.Location = new System.Drawing.Point(653, 42);
+            this.gbInfoTbSegundoApellido.Name = "gbInfoTbSegundoApellido";
+            this.gbInfoTbSegundoApellido.Size = new System.Drawing.Size(122, 20);
+            this.gbInfoTbSegundoApellido.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(557, 45);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(90, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Segundo Apellido";
+            // 
+            // gbInfoTbPrimerApellido
+            // 
+            this.gbInfoTbPrimerApellido.Location = new System.Drawing.Point(429, 42);
+            this.gbInfoTbPrimerApellido.Name = "gbInfoTbPrimerApellido";
+            this.gbInfoTbPrimerApellido.Size = new System.Drawing.Size(122, 20);
+            this.gbInfoTbPrimerApellido.TabIndex = 20;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(344, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(76, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Primer Apellido";
+            // 
+            // gbInfoTbMesa
+            // 
+            this.gbInfoTbMesa.Location = new System.Drawing.Point(653, 16);
+            this.gbInfoTbMesa.Name = "gbInfoTbMesa";
+            this.gbInfoTbMesa.Size = new System.Drawing.Size(84, 20);
+            this.gbInfoTbMesa.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(614, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Mesa";
+            // 
+            // gbInfoTbNoOrden
+            // 
+            this.gbInfoTbNoOrden.Location = new System.Drawing.Point(429, 16);
+            this.gbInfoTbNoOrden.Name = "gbInfoTbNoOrden";
+            this.gbInfoTbNoOrden.Size = new System.Drawing.Size(84, 20);
+            this.gbInfoTbNoOrden.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(359, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "No. Orden";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.comboBox1.Location = new System.Drawing.Point(233, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(91, 21);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(196, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Sexo";
+            // 
+            // gbInfoTbCentroDeVotacion
+            // 
+            this.gbInfoTbCentroDeVotacion.Location = new System.Drawing.Point(110, 146);
+            this.gbInfoTbCentroDeVotacion.Name = "gbInfoTbCentroDeVotacion";
+            this.gbInfoTbCentroDeVotacion.Size = new System.Drawing.Size(228, 20);
+            this.gbInfoTbCentroDeVotacion.TabIndex = 12;
+            // 
+            // gbInfoTbOrganismo
+            // 
+            this.gbInfoTbOrganismo.Location = new System.Drawing.Point(110, 120);
+            this.gbInfoTbOrganismo.Name = "gbInfoTbOrganismo";
+            this.gbInfoTbOrganismo.Size = new System.Drawing.Size(228, 20);
+            this.gbInfoTbOrganismo.TabIndex = 11;
+            // 
+            // gbInfoTbMunicipio
+            // 
+            this.gbInfoTbMunicipio.Location = new System.Drawing.Point(110, 94);
+            this.gbInfoTbMunicipio.Name = "gbInfoTbMunicipio";
+            this.gbInfoTbMunicipio.Size = new System.Drawing.Size(228, 20);
+            this.gbInfoTbMunicipio.TabIndex = 10;
+            // 
+            // gbInfoTbProvincia
+            // 
+            this.gbInfoTbProvincia.Location = new System.Drawing.Point(110, 68);
+            this.gbInfoTbProvincia.Name = "gbInfoTbProvincia";
+            this.gbInfoTbProvincia.Size = new System.Drawing.Size(228, 20);
+            this.gbInfoTbProvincia.TabIndex = 9;
+            // 
+            // gbInfoTbNombre
+            // 
+            this.gbInfoTbNombre.Location = new System.Drawing.Point(110, 42);
+            this.gbInfoTbNombre.Name = "gbInfoTbNombre";
+            this.gbInfoTbNombre.Size = new System.Drawing.Size(228, 20);
+            this.gbInfoTbNombre.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Centro de Votacion";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(47, 123);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Organismo";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(52, 97);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Municipio";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(53, 71);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Provincia";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 45);
+            this.label9.Location = new System.Drawing.Point(49, 45);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Nombre";
+            this.label9.Text = "Nombre(s)";
             // 
             // gbInfomTbCedula
             // 
@@ -392,188 +574,6 @@
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Cedula";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(53, 71);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Provincia";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(52, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Municipio";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(47, 123);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 13);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Organismo";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Centro de Votacion";
-            // 
-            // gbInfoTbNombre
-            // 
-            this.gbInfoTbNombre.Location = new System.Drawing.Point(110, 42);
-            this.gbInfoTbNombre.Name = "gbInfoTbNombre";
-            this.gbInfoTbNombre.Size = new System.Drawing.Size(228, 20);
-            this.gbInfoTbNombre.TabIndex = 8;
-            // 
-            // gbInfoTbProvincia
-            // 
-            this.gbInfoTbProvincia.Location = new System.Drawing.Point(110, 68);
-            this.gbInfoTbProvincia.Name = "gbInfoTbProvincia";
-            this.gbInfoTbProvincia.Size = new System.Drawing.Size(228, 20);
-            this.gbInfoTbProvincia.TabIndex = 9;
-            // 
-            // gbInfoTbMunicipio
-            // 
-            this.gbInfoTbMunicipio.Location = new System.Drawing.Point(110, 94);
-            this.gbInfoTbMunicipio.Name = "gbInfoTbMunicipio";
-            this.gbInfoTbMunicipio.Size = new System.Drawing.Size(228, 20);
-            this.gbInfoTbMunicipio.TabIndex = 10;
-            // 
-            // gbInfoTbOrganismo
-            // 
-            this.gbInfoTbOrganismo.Location = new System.Drawing.Point(110, 120);
-            this.gbInfoTbOrganismo.Name = "gbInfoTbOrganismo";
-            this.gbInfoTbOrganismo.Size = new System.Drawing.Size(228, 20);
-            this.gbInfoTbOrganismo.TabIndex = 11;
-            // 
-            // gbInfoTbCentroDeVotacion
-            // 
-            this.gbInfoTbCentroDeVotacion.Location = new System.Drawing.Point(110, 146);
-            this.gbInfoTbCentroDeVotacion.Name = "gbInfoTbCentroDeVotacion";
-            this.gbInfoTbCentroDeVotacion.Size = new System.Drawing.Size(228, 20);
-            this.gbInfoTbCentroDeVotacion.TabIndex = 12;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(196, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Sexo";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.comboBox1.Location = new System.Drawing.Point(233, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(359, 19);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "No. Orden";
-            // 
-            // gbInfoTbNoOrden
-            // 
-            this.gbInfoTbNoOrden.Location = new System.Drawing.Point(429, 16);
-            this.gbInfoTbNoOrden.Name = "gbInfoTbNoOrden";
-            this.gbInfoTbNoOrden.Size = new System.Drawing.Size(84, 20);
-            this.gbInfoTbNoOrden.TabIndex = 16;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(614, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(33, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Mesa";
-            // 
-            // gbInfoTbMesa
-            // 
-            this.gbInfoTbMesa.Location = new System.Drawing.Point(653, 16);
-            this.gbInfoTbMesa.Name = "gbInfoTbMesa";
-            this.gbInfoTbMesa.Size = new System.Drawing.Size(84, 20);
-            this.gbInfoTbMesa.TabIndex = 18;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(344, 45);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 13);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Primer Apellido";
-            // 
-            // gbInfoTbPrimerApellido
-            // 
-            this.gbInfoTbPrimerApellido.Location = new System.Drawing.Point(429, 42);
-            this.gbInfoTbPrimerApellido.Name = "gbInfoTbPrimerApellido";
-            this.gbInfoTbPrimerApellido.Size = new System.Drawing.Size(122, 20);
-            this.gbInfoTbPrimerApellido.TabIndex = 20;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(557, 45);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(90, 13);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Segundo Apellido";
-            // 
-            // gbInfoTbSegundoApellido
-            // 
-            this.gbInfoTbSegundoApellido.Location = new System.Drawing.Point(653, 42);
-            this.gbInfoTbSegundoApellido.Name = "gbInfoTbSegundoApellido";
-            this.gbInfoTbSegundoApellido.Size = new System.Drawing.Size(122, 20);
-            this.gbInfoTbSegundoApellido.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(344, 71);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(79, 13);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Circunscripcion";
-            // 
-            // gbInfoTbCircunscripcion
-            // 
-            this.gbInfoTbCircunscripcion.Location = new System.Drawing.Point(429, 68);
-            this.gbInfoTbCircunscripcion.Name = "gbInfoTbCircunscripcion";
-            this.gbInfoTbCircunscripcion.Size = new System.Drawing.Size(84, 20);
-            this.gbInfoTbCircunscripcion.TabIndex = 24;
-            // 
-            // gbInfoBtSalir
-            // 
-            this.gbInfoBtSalir.Location = new System.Drawing.Point(353, 97);
-            this.gbInfoBtSalir.Name = "gbInfoBtSalir";
-            this.gbInfoBtSalir.Size = new System.Drawing.Size(422, 69);
-            this.gbInfoBtSalir.TabIndex = 25;
-            this.gbInfoBtSalir.Text = "Salir";
-            this.gbInfoBtSalir.UseVisualStyleBackColor = true;
-            this.gbInfoBtSalir.Click += new System.EventHandler(this.gbInfoBtSalir_Click);
             // 
             // ConsultarMiembros
             // 

@@ -1,0 +1,15 @@
+# Compiled Source #
+###################
+
+[Bb]in
+[Oo]bj
+
+# Personalized User Files #
+###########################
+
+_ReSharper.*
+*.ReSharper
+*.dotCover
+*.suo
+*.user
+*.cache

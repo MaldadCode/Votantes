@@ -26,8 +26,6 @@ C:\Users\User\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe.config
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.exe
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.pdb
-C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\Modelo\VotantesDb.mdf
-C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\Modelo\VotantesDb_log.ldf
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.exe
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\1Main.pdb
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csprojResolveAssemblyReference.cache
@@ -35,3 +33,4 @@ C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Vista.MainWindow.resources
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\_1Main.Properties.Resources.resources
 C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\obj\Debug\1Main.csproj.GenerateResource.Cache
+C:\Users\alex__000\Dropbox\Projects C#\Nestor Julio Proyect\ConsultaMiembroPLD\1Main\bin\Debug\VfpClient.dll
