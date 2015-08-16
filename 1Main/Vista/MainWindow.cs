@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _1Main.Controlador;
 
 namespace _1Main.Vista
 {
@@ -15,6 +17,20 @@ namespace _1Main.Vista
         public MainWindow()
         {
             InitializeComponent();
+
+            var queryResult = new VotantesDbController();
+            MessageBox.Show(queryResult.SelectProyecto());
+//            queryResult.DbObjectName = "testDb.sql";
+
+//            MessageBox.Show(string.Format("==> Root Path: {0}\n" +
+//                                          "==> Object Name: {1}\n" +
+//                                          "==> Object Path: {2}",
+//                                                queryResult.RootPath,
+//                                                queryResult.DbObjectName,
+//                                                queryResult.DbObjectPath),
+//                                          "Testing VotantesDbController Properties");
+
+            this.BackgroundImage = null;
         }
 
         private void consultarMiembrosToolStripMenuItem_Click(object sender, EventArgs e)

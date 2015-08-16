@@ -5,34 +5,69 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
+using System.IO;
+using System.Windows.Forms;
 
-namespace ForTesting
+namespace _1Main.Controlador
 {
-    class VisualFoxProConnection
+    public class VotantesDbController
     {
-        OleDbConnection connection;
-        OleDbCommand command;
-        private void ConnectTo()
+        private OleDbConnection _connection;
+        private OleDbCommand _command;
+        private string _dbObjectName; //The private field for the 'DbObjectName'
+        private string _dbObjectPath; //The private field for the 'DbObjectPath'
+        private string RootPath //This is the Path to the main Directory of the project (Can't be changed, doesn't have the 'set' accessor)
         {
-            connection = new OleDbConnection(@"Provider=vfpoledb;Data Source=db.dbf;Persist Security Info=False");
-            command = connection.CreateCommand();
+            get
+            {
+                string rootPath =
+                Directory.GetParent(
+                    Directory.GetParent(
+                        Directory.GetParent(Directory.GetCurrentDirectory()).ToString()
+                    ).ToString()
+                ).ToString();
+                
+                return rootPath;
+            }
         }
-        public VisualFoxProConnection()
+        public string DbObjectName //This is just the name of the Db (It has a default, but can be changed through the instance of this class)
         {
-            ConnectTo();
+            get { return _dbObjectName ?? (_dbObjectName = "db.dbf"); }
+            set { _dbObjectName = value; }
+        }
+        private string DbObjectPath //This is the Path and the Name of the Db concatenated (Can't be changed, doesn't have the 'set' accessor)
+        {
+            get
+            {
+                _dbObjectPath = string.Format(@"{0}\{1}", RootPath, DbObjectName);
+
+                return _dbObjectPath;
+            }
+        }
+
+        private void ConnectTo(string dbObjectPath)
+        {
+            _connection = new OleDbConnection(string.Format(@"Provider=vfpoledb;Data Source={0};Persist Security Info=False", dbObjectPath));
+            _command = _connection.CreateCommand();
+        }
+
+        public VotantesDbController(string dbObjectName = null)
+        {
+            DbObjectName = dbObjectName;
+            ConnectTo(DbObjectPath);
         }
 
         //select un proyectos
-        public string selectProyecto()
+        public string SelectProyecto()
         {
             try
             {
                 string p = "nada";
-                command.CommandText = "SELECT * FROM padron";
-                command.CommandType = CommandType.Text;
-                connection.Open();
+                _command.CommandText = "SELECT * FROM padron";
+                _command.CommandType = CommandType.Text;
+                _connection.Open();
 
-                OleDbDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = _command.ExecuteReader();
 
                 if (reader.Read())
                 {
@@ -47,9 +82,9 @@ namespace ForTesting
             }
             finally
             {
-                if (connection != null)
+                if (_connection != null)
                 {
-                    connection.Close();
+                    _connection.Close();
                 }
             }
         }//final un proyectos
