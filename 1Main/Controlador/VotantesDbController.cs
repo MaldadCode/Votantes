@@ -16,7 +16,7 @@ namespace _1Main.Controlador
         private OleDbCommand _command;
         private string _dbObjectName; //The private field for the 'DbObjectName'
         private string _dbObjectPath; //The private field for the 'DbObjectPath'
-        private string RootPath //This is the Path to the main Directory of the project (Can't be changed, doesn't have the 'set' accessor)
+        private string RootPathDb //This is the Path to the main Directory of the project (Can't be changed, doesn't have the 'set' accessor)
         {
             get
             {
@@ -25,21 +25,23 @@ namespace _1Main.Controlador
                     Directory.GetParent(
                         Directory.GetParent(Directory.GetCurrentDirectory()).ToString()
                     ).ToString()
-                ).ToString();
+                ).ToString() + @"\Db";
                 
                 return rootPath;
             }
         }
+        /*Thinking it well, i wanted to make this dynamically but for that we probably have to make the same with the 'Provider' and if the database has 'user' and 'pass' or
+         not that's other things we have to look at but that will be later xD*/
         public string DbObjectName //This is just the name of the Db (It has a default, but can be changed through the instance of this class)
         {
-            get { return _dbObjectName ?? (_dbObjectName = "db.dbf"); }
+            get { return _dbObjectName ?? (_dbObjectName = "padron.dbf"); }
             set { _dbObjectName = value; }
         }
         private string DbObjectPath //This is the Path and the Name of the Db concatenated (Can't be changed, doesn't have the 'set' accessor)
         {
             get
             {
-                _dbObjectPath = string.Format(@"{0}\{1}", RootPath, DbObjectName);
+                _dbObjectPath = string.Format(@"{0}\{1}", RootPathDb, DbObjectName);
 
                 return _dbObjectPath;
             }

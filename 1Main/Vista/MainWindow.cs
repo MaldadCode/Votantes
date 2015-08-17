@@ -20,15 +20,6 @@ namespace _1Main.Vista
 
             var queryResult = new VotantesDbController();
             MessageBox.Show(queryResult.SelectProyecto());
-//            queryResult.DbObjectName = "testDb.sql";
-
-//            MessageBox.Show(string.Format("==> Root Path: {0}\n" +
-//                                          "==> Object Name: {1}\n" +
-//                                          "==> Object Path: {2}",
-//                                                queryResult.RootPath,
-//                                                queryResult.DbObjectName,
-//                                                queryResult.DbObjectPath),
-//                                          "Testing VotantesDbController Properties");
 
             this.BackgroundImage = null;
         }
