@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,6 +30,7 @@ namespace _1Main.Vista
         }
         #endregion
 
+        #region Constructor
         private ConsultarMiembros()
         {
             InitializeComponent();
@@ -36,7 +39,9 @@ namespace _1Main.Vista
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
+        #endregion
 
+        #region Metodos Auxiliares
         private void activatePanels(RadioButton rbButton)
         {
             if (rbButton.Name == rbCedula.Name && rbButton.Checked == true)
@@ -59,20 +64,112 @@ namespace _1Main.Vista
             }
         }
 
+        private string[] DictValuesToList(Dictionary<string, string> dictionary)
+        {
+            var result = new string[dictionary.Count];
+
+            for (int i = 0; i < dictionary.Count; i++)
+            {
+                result[i] = dictionary.Values.ToList()[i];
+            }
+
+            return result;
+        }
+        #endregion
+
+        #region Panel - Botones Buscar
         private void panelCedulabBuscar_Click(object sender, EventArgs e)
         {
+            var cedulaRE = new Regex(@"\d{1,3}-\d{1,7}-\d");
+            var validCedula = cedulaRE.Match(panelCedulamTbCedula.Text).Success;
 
+            if (!validCedula)
+            {
+                MessageBox.Show("Cedula Invalida.");
+                panelCedulamTbCedula.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Buscando...");
+            }
         }
 
         private void panelApellidosbBuscar_Click(object sender, EventArgs e)
         {
-
+            switch (panelApellidostbPrimerApellido.Text.Length)
+            {
+                case 0:
+                    MessageBox.Show("Primer Apellido no puede quedar Vacio.");
+                    panelApellidostbPrimerApellido.Focus();
+                    break;
+                case 1:
+                case 2:
+                    MessageBox.Show("Primer Apellido debe contener minimo 3 Caracteres.");
+                    panelApellidostbPrimerApellido.Focus();
+                    break;
+                default:
+                    MessageBox.Show("Buscando...");
+                    break;
+            }
         }
 
         private void panelNombreYApellidosbBuscar_Click(object sender, EventArgs e)
         {
+            var flag = true;
+            string[] mList;
+            var errors = new Dictionary<string, string>();
 
+            if (panelNombresYApellidostbPrimerNombre.Text.Length < 1)
+            {
+                errors["primerNombre"] = "Primer Nombre no puede quedar Vacio.";
+                flag = false;
+            }
+            else if (panelNombresYApellidostbPrimerNombre.Text.Length < 3)
+            {
+                errors["primerNombre"] = "Primer Nombre debe contener minimo 3 Caracteres.";
+                flag = false;
+            }
+
+            if (panelNombresYApellidostbPrimerApellido.Text.Length < 1)
+            {
+                errors["primerApellido"] = "Primer Apellido no puede quedar Vacio.";
+                flag = false;
+            }
+            else if (panelNombresYApellidostbPrimerApellido.Text.Length < 3)
+            {
+                errors["primerApellido"] = "Primer Apellido debe contener minimo 3 Caracteres.";
+                flag = false;
+            }
+
+            var numbersOfParams = Convert.ToInt16(errors.Count.ToString()) > 1 ? "{0}\n{1}" : "{0}";
+
+            if (flag)
+            {
+                MessageBox.Show("Buscando...");
+            }
+            else
+            {
+                MessageBox.Show(string.Format(numbersOfParams, DictValuesToList(errors)));
+                if (panelNombresYApellidostbPrimerNombre.Text.Length < 1 &&
+                    panelNombresYApellidostbPrimerApellido.Text.Length < 1)
+                {
+                    panelNombresYApellidostbPrimerNombre.Focus();
+                }
+                else if (panelNombresYApellidostbPrimerNombre.Text.Length > 2)
+                {
+                    panelNombresYApellidostbPrimerApellido.Focus();
+                }
+                else if (panelNombresYApellidostbPrimerApellido.Text.Length > 2)
+                {
+                    panelNombresYApellidostbPrimerNombre.Focus();
+                }
+                else
+                {
+                    panelNombresYApellidostbPrimerNombre.Focus();
+                }
+            }
         }
+        #endregion
 
         #region Enable RadioButtons
         private void rbCedula_CheckedChanged(object sender, EventArgs e)
@@ -91,9 +188,67 @@ namespace _1Main.Vista
         }
         #endregion
 
+        #region Panel - Evento KeyPress de los Botones de 'Buscar'
+        private void panelApellidostbPrimerApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int) Keys.Enter)
+            {
+                panelApellidosbBuscar.PerformClick();
+            }
+        }
+
+        private void panelApellidostbSegundoApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int) Keys.Enter)
+            {
+                panelApellidosbBuscar.PerformClick();
+            }
+        }
+
+        private void panelCedulamTbCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int) Keys.Enter)
+            {
+                panelCedulabBuscar.PerformClick();
+            }
+        }
+
+        private void panelNombresYApellidostbPrimerApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int) Keys.Enter)
+            {
+                panelNombresYApellidosbBuscar.PerformClick();
+            }
+        }
+
+        private void panelNombresYApellidostbPrimerNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                panelNombresYApellidosbBuscar.PerformClick();
+            }
+        }
+
+        private void panelNombresYApellidostbSegundoApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                panelNombresYApellidosbBuscar.PerformClick();
+            }
+        }
+
+        private void panelNombresYApellidostbSegundoNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                panelNombresYApellidosbBuscar.PerformClick();
+            }
+        }
+        #endregion
+
         private void gbInfoBtSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

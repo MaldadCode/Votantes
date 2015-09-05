@@ -18,10 +18,10 @@ namespace _1Main.Vista
         {
             InitializeComponent();
 
-            var queryResult = new VotantesDbController();
-            MessageBox.Show(queryResult.SelectProyecto());
+//            var queryResult = new VotantesDbController();
+//            MessageBox.Show(queryResult.SelectProyecto());
 
-            this.BackgroundImage = null;
+            BackgroundImage = null;
         }
 
         private void consultarMiembrosToolStripMenuItem_Click(object sender, EventArgs e)

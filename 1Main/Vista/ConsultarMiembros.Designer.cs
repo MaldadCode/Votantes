@@ -44,10 +44,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panelNombresYApellidos = new System.Windows.Forms.Panel();
-            this.panelNombreYApellidosbBuscar = new System.Windows.Forms.Button();
-            this.panelNombreYApellidostbSegundoApellido = new System.Windows.Forms.TextBox();
-            this.panelNombreYApellidostbSegundoNombre = new System.Windows.Forms.TextBox();
-            this.panelNombreYApellidostbApellido = new System.Windows.Forms.TextBox();
+            this.panelNombresYApellidosbBuscar = new System.Windows.Forms.Button();
+            this.panelNombresYApellidostbSegundoApellido = new System.Windows.Forms.TextBox();
+            this.panelNombresYApellidostbSegundoNombre = new System.Windows.Forms.TextBox();
+            this.panelNombresYApellidostbPrimerApellido = new System.Windows.Forms.TextBox();
             this.panelNombresYApellidostbPrimerNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -165,6 +165,7 @@
             this.panelCedulamTbCedula.ResetOnSpace = false;
             this.panelCedulamTbCedula.Size = new System.Drawing.Size(80, 20);
             this.panelCedulamTbCedula.TabIndex = 1;
+            this.panelCedulamTbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelCedulamTbCedula_KeyPress);
             // 
             // label1
             // 
@@ -203,14 +204,16 @@
             this.panelApellidostbPrimerApellido.Location = new System.Drawing.Point(104, 12);
             this.panelApellidostbPrimerApellido.Name = "panelApellidostbPrimerApellido";
             this.panelApellidostbPrimerApellido.Size = new System.Drawing.Size(170, 20);
-            this.panelApellidostbPrimerApellido.TabIndex = 3;
+            this.panelApellidostbPrimerApellido.TabIndex = 2;
+            this.panelApellidostbPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelApellidostbPrimerApellido_KeyPress);
             // 
             // panelApellidostbSegundoApellido
             // 
             this.panelApellidostbSegundoApellido.Location = new System.Drawing.Point(104, 38);
             this.panelApellidostbSegundoApellido.Name = "panelApellidostbSegundoApellido";
             this.panelApellidostbSegundoApellido.Size = new System.Drawing.Size(170, 20);
-            this.panelApellidostbSegundoApellido.TabIndex = 2;
+            this.panelApellidostbSegundoApellido.TabIndex = 3;
+            this.panelApellidostbSegundoApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelApellidostbSegundoApellido_KeyPress);
             // 
             // label7
             // 
@@ -232,10 +235,10 @@
             // 
             // panelNombresYApellidos
             // 
-            this.panelNombresYApellidos.Controls.Add(this.panelNombreYApellidosbBuscar);
-            this.panelNombresYApellidos.Controls.Add(this.panelNombreYApellidostbSegundoApellido);
-            this.panelNombresYApellidos.Controls.Add(this.panelNombreYApellidostbSegundoNombre);
-            this.panelNombresYApellidos.Controls.Add(this.panelNombreYApellidostbApellido);
+            this.panelNombresYApellidos.Controls.Add(this.panelNombresYApellidosbBuscar);
+            this.panelNombresYApellidos.Controls.Add(this.panelNombresYApellidostbSegundoApellido);
+            this.panelNombresYApellidos.Controls.Add(this.panelNombresYApellidostbSegundoNombre);
+            this.panelNombresYApellidos.Controls.Add(this.panelNombresYApellidostbPrimerApellido);
             this.panelNombresYApellidos.Controls.Add(this.panelNombresYApellidostbPrimerNombre);
             this.panelNombresYApellidos.Controls.Add(this.label5);
             this.panelNombresYApellidos.Controls.Add(this.label4);
@@ -247,36 +250,39 @@
             this.panelNombresYApellidos.TabIndex = 2;
             this.panelNombresYApellidos.Visible = false;
             // 
-            // panelNombreYApellidosbBuscar
+            // panelNombresYApellidosbBuscar
             // 
-            this.panelNombreYApellidosbBuscar.Location = new System.Drawing.Point(552, 10);
-            this.panelNombreYApellidosbBuscar.Name = "panelNombreYApellidosbBuscar";
-            this.panelNombreYApellidosbBuscar.Size = new System.Drawing.Size(75, 23);
-            this.panelNombreYApellidosbBuscar.TabIndex = 16;
-            this.panelNombreYApellidosbBuscar.Text = "Buscar";
-            this.panelNombreYApellidosbBuscar.UseVisualStyleBackColor = true;
-            this.panelNombreYApellidosbBuscar.Click += new System.EventHandler(this.panelNombreYApellidosbBuscar_Click);
+            this.panelNombresYApellidosbBuscar.Location = new System.Drawing.Point(552, 10);
+            this.panelNombresYApellidosbBuscar.Name = "panelNombresYApellidosbBuscar";
+            this.panelNombresYApellidosbBuscar.Size = new System.Drawing.Size(75, 23);
+            this.panelNombresYApellidosbBuscar.TabIndex = 16;
+            this.panelNombresYApellidosbBuscar.Text = "Buscar";
+            this.panelNombresYApellidosbBuscar.UseVisualStyleBackColor = true;
+            this.panelNombresYApellidosbBuscar.Click += new System.EventHandler(this.panelNombreYApellidosbBuscar_Click);
             // 
-            // panelNombreYApellidostbSegundoApellido
+            // panelNombresYApellidostbSegundoApellido
             // 
-            this.panelNombreYApellidostbSegundoApellido.Location = new System.Drawing.Point(376, 38);
-            this.panelNombreYApellidostbSegundoApellido.Name = "panelNombreYApellidostbSegundoApellido";
-            this.panelNombreYApellidostbSegundoApellido.Size = new System.Drawing.Size(170, 20);
-            this.panelNombreYApellidostbSegundoApellido.TabIndex = 15;
+            this.panelNombresYApellidostbSegundoApellido.Location = new System.Drawing.Point(376, 38);
+            this.panelNombresYApellidostbSegundoApellido.Name = "panelNombresYApellidostbSegundoApellido";
+            this.panelNombresYApellidostbSegundoApellido.Size = new System.Drawing.Size(170, 20);
+            this.panelNombresYApellidostbSegundoApellido.TabIndex = 15;
+            this.panelNombresYApellidostbSegundoApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelNombresYApellidostbSegundoApellido_KeyPress);
             // 
-            // panelNombreYApellidostbSegundoNombre
+            // panelNombresYApellidostbSegundoNombre
             // 
-            this.panelNombreYApellidostbSegundoNombre.Location = new System.Drawing.Point(376, 12);
-            this.panelNombreYApellidostbSegundoNombre.Name = "panelNombreYApellidostbSegundoNombre";
-            this.panelNombreYApellidostbSegundoNombre.Size = new System.Drawing.Size(170, 20);
-            this.panelNombreYApellidostbSegundoNombre.TabIndex = 14;
+            this.panelNombresYApellidostbSegundoNombre.Location = new System.Drawing.Point(376, 12);
+            this.panelNombresYApellidostbSegundoNombre.Name = "panelNombresYApellidostbSegundoNombre";
+            this.panelNombresYApellidostbSegundoNombre.Size = new System.Drawing.Size(170, 20);
+            this.panelNombresYApellidostbSegundoNombre.TabIndex = 14;
+            this.panelNombresYApellidostbSegundoNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelNombresYApellidostbSegundoNombre_KeyPress);
             // 
-            // panelNombreYApellidostbApellido
+            // panelNombresYApellidostbPrimerApellido
             // 
-            this.panelNombreYApellidostbApellido.Location = new System.Drawing.Point(104, 38);
-            this.panelNombreYApellidostbApellido.Name = "panelNombreYApellidostbApellido";
-            this.panelNombreYApellidostbApellido.Size = new System.Drawing.Size(170, 20);
-            this.panelNombreYApellidostbApellido.TabIndex = 13;
+            this.panelNombresYApellidostbPrimerApellido.Location = new System.Drawing.Point(104, 38);
+            this.panelNombresYApellidostbPrimerApellido.Name = "panelNombresYApellidostbPrimerApellido";
+            this.panelNombresYApellidostbPrimerApellido.Size = new System.Drawing.Size(170, 20);
+            this.panelNombresYApellidostbPrimerApellido.TabIndex = 13;
+            this.panelNombresYApellidostbPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelNombresYApellidostbPrimerApellido_KeyPress);
             // 
             // panelNombresYApellidostbPrimerNombre
             // 
@@ -284,6 +290,7 @@
             this.panelNombresYApellidostbPrimerNombre.Name = "panelNombresYApellidostbPrimerNombre";
             this.panelNombresYApellidostbPrimerNombre.Size = new System.Drawing.Size(170, 20);
             this.panelNombresYApellidostbPrimerNombre.TabIndex = 12;
+            this.panelNombresYApellidostbPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.panelNombresYApellidostbPrimerNombre_KeyPress);
             // 
             // label5
             // 
@@ -616,16 +623,16 @@
         private System.Windows.Forms.Panel panelNombresYApellidos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox panelCedulamTbCedula;
-        private System.Windows.Forms.TextBox panelNombreYApellidostbSegundoApellido;
-        private System.Windows.Forms.TextBox panelNombreYApellidostbSegundoNombre;
-        private System.Windows.Forms.TextBox panelNombreYApellidostbApellido;
+        private System.Windows.Forms.TextBox panelNombresYApellidostbSegundoApellido;
+        private System.Windows.Forms.TextBox panelNombresYApellidostbSegundoNombre;
+        private System.Windows.Forms.TextBox panelNombresYApellidostbPrimerApellido;
         private System.Windows.Forms.TextBox panelNombresYApellidostbPrimerNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button panelCedulabBuscar;
-        private System.Windows.Forms.Button panelNombreYApellidosbBuscar;
+        private System.Windows.Forms.Button panelNombresYApellidosbBuscar;
         private System.Windows.Forms.TextBox panelApellidostbPrimerApellido;
         private System.Windows.Forms.TextBox panelApellidostbSegundoApellido;
         private System.Windows.Forms.Label label7;
