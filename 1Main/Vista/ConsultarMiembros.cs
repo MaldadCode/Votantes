@@ -75,6 +75,19 @@ namespace _1Main.Vista
 
             return result;
         }
+
+        private string GetNumbersOfParams(int count)
+        {
+            var numbersOfParams = string.Empty;
+            for (int i = 0; i < count; i++)
+            {
+                numbersOfParams += numbersOfParams.Length > 0 ?
+                    "\n{/holder}".Replace("/holder", i.ToString()) :
+                    "{/holder}".Replace("/holder", i.ToString());
+            }
+
+            return numbersOfParams;
+        }
         #endregion
 
         #region Panel - Botones Buscar
@@ -141,15 +154,14 @@ namespace _1Main.Vista
                 flag = false;
             }
 
-            var numbersOfParams = Convert.ToInt16(errors.Count.ToString()) > 1 ? "{0}\n{1}" : "{0}";
-
             if (flag)
             {
                 MessageBox.Show("Buscando...");
             }
             else
             {
-                MessageBox.Show(string.Format(numbersOfParams, DictValuesToList(errors)));
+                MessageBox.Show(string.Format(GetNumbersOfParams(errors.Count), DictValuesToList(errors)));
+
                 if (panelNombresYApellidostbPrimerNombre.Text.Length < 1 &&
                     panelNombresYApellidostbPrimerApellido.Text.Length < 1)
                 {
@@ -171,7 +183,7 @@ namespace _1Main.Vista
         }
         #endregion
 
-        #region Enable RadioButtons
+        #region Habilitar RadioButtons
         private void rbCedula_CheckedChanged(object sender, EventArgs e)
         {
             activatePanels(rbCedula);

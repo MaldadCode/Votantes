@@ -7,11 +7,13 @@ using System.Data.OleDb;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using _1Main.Modelo;
 
 namespace _1Main.Controlador
 {
     public class VotantesDbController
     {
+        #region Props and Fields
         private OleDbConnection _connection;
         private OleDbCommand _command;
         private string _dbObjectName; //The private field for the 'DbObjectName'
@@ -46,12 +48,7 @@ namespace _1Main.Controlador
                 return _dbObjectPath;
             }
         }
-
-        private void ConnectTo(string dbObjectPath)
-        {
-            _connection = new OleDbConnection(string.Format(@"Provider=vfpoledb;Data Source={0};Persist Security Info=False", dbObjectPath));
-            _command = _connection.CreateCommand();
-        }
+        #endregion
 
         public VotantesDbController(string dbObjectName = null)
         {
@@ -59,28 +56,57 @@ namespace _1Main.Controlador
             ConnectTo(DbObjectPath);
         }
 
-        //select un proyectos
-        public string SelectProyecto()
+        private void ConnectTo(string dbObjectPath)
+        {
+            _connection = new OleDbConnection(string.Format(@"Provider=vfpoledb;Data Source={0};Persist Security Info=False", dbObjectPath));
+            _command = _connection.CreateCommand();
+        }
+
+        public string MigrationDB()
         {
             try
             {
-                string p = "nada";
+                string p = "No se encontro nada.";
                 _command.CommandText = "SELECT * FROM padron";
                 _command.CommandType = CommandType.Text;
                 _connection.Open();
 
                 OleDbDataReader reader = _command.ExecuteReader();
+                var votantes = new List<Votante>();
 
-                if (reader.Read())
+                if (reader.Read()) //Ready For the Migration
                 {
-                    p = reader["NOMBRE"].ToString();
+//                    for (int i = 0; i < reader.RecordsAffected; i++)
+//                    {
+//                        var votante = new Votante();
+//                        votante.CodigoProvincia = reader.GetString(0);
+//                        votante.Provincia = reader.GetString(1);
+//                        votante.Circunscripcion = reader.GetFieldValue<decimal>(2);
+//                        votante.CodigoMunicipio = reader.GetString(3);
+//                        votante.Municipio = reader.GetString(4);
+//                        votante.NombreCI = reader.GetString(5);
+//                        votante.Centro = reader.GetString(6);
+//                        votante.DireccionCentro = reader.GetString(7);
+//                        votante.SectorCentro = reader.GetString(8);
+//                        votante.Mesa = reader.GetString(9);
+//                        votante.Cedula = reader.GetString(10);
+//                        votante.Nombre = reader.GetString(11);
+//                        votante.PrimerApellido = reader.GetString(12);
+//                        votante.SegundoApellido = reader.GetString(13);
+//                        votante.Sexo = reader.GetString(14);
+//                        votante.Orden = reader.GetInt32(15);
+//
+//                        votantes.Add(votante);
+//                        reader.Read();
+//                    }
+//
+//                    p = string.Format("Votante 1: {0}\nVotante 2: {1}", votantes[0].Nombre, votantes[1].Nombre);
                 }
                 return p;
-
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                return e.ToString();
             }
             finally
             {
@@ -89,6 +115,6 @@ namespace _1Main.Controlador
                     _connection.Close();
                 }
             }
-        }//final un proyectos
+        }
     }
 }

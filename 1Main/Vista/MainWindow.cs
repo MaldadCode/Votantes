@@ -19,7 +19,7 @@ namespace _1Main.Vista
             InitializeComponent();
 
 //            var queryResult = new VotantesDbController();
-//            MessageBox.Show(queryResult.SelectProyecto());
+//            MessageBox.Show(queryResult.MigrationDB());
 
             BackgroundImage = null;
         }

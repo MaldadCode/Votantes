@@ -387,6 +387,7 @@
             // 
             this.gbInfoTbCircunscripcion.Location = new System.Drawing.Point(429, 68);
             this.gbInfoTbCircunscripcion.Name = "gbInfoTbCircunscripcion";
+            this.gbInfoTbCircunscripcion.ReadOnly = true;
             this.gbInfoTbCircunscripcion.Size = new System.Drawing.Size(84, 20);
             this.gbInfoTbCircunscripcion.TabIndex = 24;
             // 
@@ -403,6 +404,7 @@
             // 
             this.gbInfoTbSegundoApellido.Location = new System.Drawing.Point(653, 42);
             this.gbInfoTbSegundoApellido.Name = "gbInfoTbSegundoApellido";
+            this.gbInfoTbSegundoApellido.ReadOnly = true;
             this.gbInfoTbSegundoApellido.Size = new System.Drawing.Size(122, 20);
             this.gbInfoTbSegundoApellido.TabIndex = 22;
             // 
@@ -419,6 +421,7 @@
             // 
             this.gbInfoTbPrimerApellido.Location = new System.Drawing.Point(429, 42);
             this.gbInfoTbPrimerApellido.Name = "gbInfoTbPrimerApellido";
+            this.gbInfoTbPrimerApellido.ReadOnly = true;
             this.gbInfoTbPrimerApellido.Size = new System.Drawing.Size(122, 20);
             this.gbInfoTbPrimerApellido.TabIndex = 20;
             // 
@@ -435,6 +438,7 @@
             // 
             this.gbInfoTbMesa.Location = new System.Drawing.Point(653, 16);
             this.gbInfoTbMesa.Name = "gbInfoTbMesa";
+            this.gbInfoTbMesa.ReadOnly = true;
             this.gbInfoTbMesa.Size = new System.Drawing.Size(84, 20);
             this.gbInfoTbMesa.TabIndex = 18;
             // 
@@ -451,6 +455,7 @@
             // 
             this.gbInfoTbNoOrden.Location = new System.Drawing.Point(429, 16);
             this.gbInfoTbNoOrden.Name = "gbInfoTbNoOrden";
+            this.gbInfoTbNoOrden.ReadOnly = true;
             this.gbInfoTbNoOrden.Size = new System.Drawing.Size(84, 20);
             this.gbInfoTbNoOrden.TabIndex = 16;
             // 
@@ -488,6 +493,7 @@
             // 
             this.gbInfoTbCentroDeVotacion.Location = new System.Drawing.Point(110, 146);
             this.gbInfoTbCentroDeVotacion.Name = "gbInfoTbCentroDeVotacion";
+            this.gbInfoTbCentroDeVotacion.ReadOnly = true;
             this.gbInfoTbCentroDeVotacion.Size = new System.Drawing.Size(228, 20);
             this.gbInfoTbCentroDeVotacion.TabIndex = 12;
             // 
@@ -495,6 +501,7 @@
             // 
             this.gbInfoTbOrganismo.Location = new System.Drawing.Point(110, 120);
             this.gbInfoTbOrganismo.Name = "gbInfoTbOrganismo";
+            this.gbInfoTbOrganismo.ReadOnly = true;
             this.gbInfoTbOrganismo.Size = new System.Drawing.Size(228, 20);
             this.gbInfoTbOrganismo.TabIndex = 11;
             // 
@@ -502,6 +509,7 @@
             // 
             this.gbInfoTbMunicipio.Location = new System.Drawing.Point(110, 94);
             this.gbInfoTbMunicipio.Name = "gbInfoTbMunicipio";
+            this.gbInfoTbMunicipio.ReadOnly = true;
             this.gbInfoTbMunicipio.Size = new System.Drawing.Size(228, 20);
             this.gbInfoTbMunicipio.TabIndex = 10;
             // 
@@ -509,6 +517,7 @@
             // 
             this.gbInfoTbProvincia.Location = new System.Drawing.Point(110, 68);
             this.gbInfoTbProvincia.Name = "gbInfoTbProvincia";
+            this.gbInfoTbProvincia.ReadOnly = true;
             this.gbInfoTbProvincia.Size = new System.Drawing.Size(228, 20);
             this.gbInfoTbProvincia.TabIndex = 9;
             // 
@@ -516,6 +525,7 @@
             // 
             this.gbInfoTbNombre.Location = new System.Drawing.Point(110, 42);
             this.gbInfoTbNombre.Name = "gbInfoTbNombre";
+            this.gbInfoTbNombre.ReadOnly = true;
             this.gbInfoTbNombre.Size = new System.Drawing.Size(228, 20);
             this.gbInfoTbNombre.TabIndex = 8;
             // 
@@ -569,6 +579,7 @@
             this.gbInfomTbCedula.Location = new System.Drawing.Point(110, 16);
             this.gbInfomTbCedula.Mask = "000-0000000-0";
             this.gbInfomTbCedula.Name = "gbInfomTbCedula";
+            this.gbInfomTbCedula.ReadOnly = true;
             this.gbInfomTbCedula.ResetOnSpace = false;
             this.gbInfomTbCedula.Size = new System.Drawing.Size(80, 20);
             this.gbInfomTbCedula.TabIndex = 2;
